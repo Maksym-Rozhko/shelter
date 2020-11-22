@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   padding-top: 21px;
   padding-bottom: 29px;
   background: #fff;
@@ -39,7 +44,7 @@
 }
 
 .our-friends {
-  padding-top: 80px;
+  padding-top: 201px;
 }
 
 .slider {
@@ -51,6 +56,7 @@
 .slider__items {
   margin-right: 40px;
   margin-bottom: 30px;
+  margin-left: 0;
 }
 
 .slider__items:nth-child(8) {
@@ -88,9 +94,26 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0;
-  margin: 0;
   list-style: none;
+}
+
+.our-friends__pagination__button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-family: Georgia;
+  font-size: 20px;
+  color: #292929;
+  letter-spacing: 1px;
+  line-height: 1;
+  outline: none;
+  -webkit-transition: all .7s;
+  transition: all .7s;
 }
 
 .our-friends__pagination__items {
@@ -101,38 +124,36 @@
   margin-right: 0;
 }
 
-.our-friends__pagination__button {
-  -webkit-transition: all .7s;
-  transition: all .7s;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  font-family: 'Georgia', serif;
+.our-friends__pagination .disabled {
+  font-family: Georgia;
   font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  line-height: 115%;
-  text-align: center;
+  color: #cdcdcd;
+  letter-spacing: 1px;
+  line-height: 1;
+  border: 2px solid #cdcdcd;
+  cursor: default;
 }
 
-.our-friends__pagination__button:hover {
-  background-color: #f1cdb3;
+.our-friends__pagination .btn__pagin {
+  border: 2px solid #F1CDB3;
+  background-color: #F1CDB3;
   cursor: pointer;
 }
 
-.our-friends__pagination__button--disabled {
-  border: 2px solid #cdcdcd;
+.our-friends__pagination .btn__pagin:hover {
+  border: 2px solid #FDDCC4;
+  background-color: #f6f6f6;
 }
 
-.our-friends__pagination__button--number {
-  border: none;
-  color: #292929;
-  background-color: #f1cdb3;
+.our-friends__pagination .btn__nav {
+  border: 2px solid #F1CDB3;
+  background-color: #f6f6f6;
+  cursor: pointer;
 }
 
-.our-friends__pagination__button--right {
-  border: 2px solid #f1cdb3;
-  color: #292929;
+.our-friends__pagination .btn__nav:hover {
+  border: 2px solid #FDDCC4;
+  background-color: #FDDCC4;
 }
 
 @media (max-width: 768px) {
@@ -194,9 +215,6 @@
   .slider__items:nth-child(odd) {
     margin: 0 auto;
     margin-bottom: 30px;
-  }
-  .slider__items:nth-child(even) {
-    display: none;
   }
   .our-friends__pagination__items {
     margin-right: 9px;
