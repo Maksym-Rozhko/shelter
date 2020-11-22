@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../assets/images/favicon.jpeg">
     <title>Shelter-Pets</title>
     <link rel="stylesheet" href="../main/css/normolize.css">
     <link rel="stylesheet" href="../main/css/style.css">
@@ -67,110 +68,44 @@
                     </span>
                 </h2>
                 <div class="slider"><!-- slider open -->
-                    <div class="slider__items">
-                        <div class="slider__box">
-                            <img src="../../assets/images/pets-katrine-v1.png" alt="pets-katrine" class="slider__img">
-                        </div>
-                        <p class="slider__text">
-                            Katrine
-                        </p>
-                        <button class="header-content__button slider__btn">
-                            Learn more
-                        </button>
-                    </div>
-                    <div class="slider__items">
-                        <div class="slider__box">
-                            <img src="../../assets/images/pets-jennifer-v1.png" alt="pets-jennifer" class="slider__img">
-                        </div>
-                        <p class="slider__text">
-                            Jennifer
-                        </p>
-                        <button class="header-content__button slider__btn">
-                            Learn more
-                        </button>
-                    </div>
-                    <div class="slider__items">
-                        <div class="slider__box">
-                            <img src="../../assets/images/pets-woody-v1.png" alt="pets-woody" class="slider__img">
-                        </div>
-                        <p class="slider__text">
-                            Woody
-                        </p>
-                        <button class="header-content__button slider__btn">
-                            Learn more
-                        </button>
-                    </div>
-                    <div class="slider__items">
-                        <div class="slider__box">
-                            <img src="../../assets/images/pets-katrine.png" alt="pets-Sophia" class="slider__img">
-                        </div>
-                        <p class="slider__text">
-                            Sophia
-                        </p>
-                        <button class="header-content__button slider__btn">
-                            Learn more
-                        </button>
-                    </div>
-                    <div class="slider__items">
-                        <div class="slider__box">
-                            <img src="../../assets/images/pets-timmy.png" alt="pets-Timmy" class="slider__img">
-                        </div>
-                        <p class="slider__text">
-                            Timmy
-                        </p>
-                        <button class="header-content__button slider__btn">
-                            Learn more
-                        </button>
-                    </div>
-                    <div class="slider__items">
-                        <div class="slider__box">
-                            <img src="../../assets/images/pets-charly.png" alt="pets-Charly" class="slider__img">
-                        </div>
-                        <p class="slider__text">
-                            Charly
-                        </p>
-                        <button class="header-content__button slider__btn">
-                            Learn more
-                        </button>
-                    </div>
-                    <div class="slider__items">
-                        <div class="slider__box">
-                            <img src="../../assets/images/pets-scarlet.png" alt="pets-Scarlett" class="slider__img">
-                        </div>
-                        <p class="slider__text">
-                            Scarlett
-                        </p>
-                        <button class="header-content__button slider__btn">
-                            Learn more
-                        </button>
-                    </div>
-                    <div class="slider__items">
-                        <div class="slider__box">
-                            <img src="../../assets/images/pets-katrine1.png" alt="pets-Freddie" class="slider__img">
-                        </div>
-                        <p class="slider__text">
-                            Freddie
-                        </p>
-                        <button class="header-content__button slider__btn">
-                            Learn more
-                        </button>
-                    </div>
+                   <!-- Slider content render with JS -->
                 </div><!-- slider closed //-->
+                <div id="petsModal" class="modal">
+                    <div class="modal__wrapper">
+                        <span class="modal__close" onclick="">×</span>
+                        <div class="modal__box">
+                            <div class="modal__img">
+                                <img>
+                            </div>
+                            <div class="modal__content">
+                                <h3 class="modal__name"></h3>
+                                <p class="modal__text"></p>
+                                <p class="modal__descrp"></p>
+                                <ul class="modal__lists">
+                                    <li class="modal__lists-item"></li>
+                                    <li class="modal__lists-item"></li>
+                                    <li class="modal__lists-item"></li>
+                                    <li class="modal__lists-item"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <ul class="our-friends__pagination">
                     <li class="our-friends__pagination__items">
-                        <button disabled class="our-friends__pagination__button our-friends__pagination__button--disabled">&lt;&lt;</button>
+                        <button id="firstPage" class="btn__first our-friends__pagination__button">&lt;&lt;</button>
                     </li>
                     <li class="our-friends__pagination__items">
-                        <button disabled class="our-friends__pagination__button our-friends__pagination__button--disabled">&lt;</button>
+                        <button id="prevPage" class="btn__prev our-friends__pagination__button">&lt;</button>
                     </li>
                     <li class="our-friends__pagination__items">
-                        <button class="our-friends__pagination__button our-friends__pagination__button--number">1</button>
+                        <button class="btn__pagin our-friends__pagination__button our-friends__pagination__button--number">1</button>
                     </li>
                     <li class="our-friends__pagination__items">
-                        <button class="our-friends__pagination__button our-friends__pagination__button--right">&gt;</button>
+                        <button id="nextPage" class="btn__nav our-friends__pagination__button our-friends__pagination__button--right">&gt;</button>
                     </li>
                     <li class="our-friends__pagination__items">
-                        <button class="our-friends__pagination__button our-friends__pagination__button--right">&gt;&gt;</button>
+                        <button id="lastPage" class="btn__nav btn__last our-friends__pagination__button our-friends__pagination__button--right">&gt;&gt;</button>
                     </li>
                 </ul>
             </div>
@@ -233,6 +168,6 @@
             </div>
         </div>
     </footer>
-    <script src="../main/js/index.js"></script>
+    <script type="module" src="js/pets.js"></script>
 </body>
 </html>

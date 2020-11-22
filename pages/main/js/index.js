@@ -31,7 +31,7 @@ header.addEventListener('click', (e) => {
     } else {
         return
     }
-})
+});
 
 for(let i = 0; i < pets.length; i++) {
     let card = document.createElement('div');
@@ -49,20 +49,20 @@ for(let i = 0; i < pets.length; i++) {
     }
 
     slider.append(card);
-    let imgBox = document.createElement('div');
+    const imgBox = document.createElement('div');
     imgBox.classList.add('slider__box');
-    let img = document.createElement('img');
+    const img = document.createElement('img');
     img.setAttribute('src', pets[i].img);
     img.classList.add('slider__img');
     imgBox.append(img);
     card.append(imgBox);
 
-    let petName = document.createElement('p');
+    const petName = document.createElement('p');
     petName.classList.add('slider__text');
     petName.innerHTML = pets[i].name;
     card.append(petName);
 
-    let btnPet = document.createElement('button');
+    const btnPet = document.createElement('button');
     btnPet.classList.add('header-content__button', 'slider__btn');
     btnPet.setAttribute('data-petnumb', i);
     btnPet.addEventListener('click', learnMore)
