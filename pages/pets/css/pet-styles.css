@@ -203,7 +203,7 @@
 
 @media (max-width: 320px) {
   .our-friends {
-    padding-top: 43px;
+    padding-top: 164px;
     padding-bottom: 41px;
   }
   .our-friends__title {
@@ -221,6 +221,26 @@
   }
   .link-tel {
     margin-bottom: 36px;
+  }
+  .footer__title {
+    font-size: 35px;
+  }
+  .link-mail {
+    margin-left: 12px;
+    margin-bottom: 38px;
+  }
+  .link-tel {
+    margin-left: 12px;
+    margin-bottom: 35px;
+  }
+  .footer__title-second {
+    margin-bottom: 33px;
+  }
+  .footer__link-location {
+    margin-bottom: 34px;
+  }
+  .footer__box-img {
+    margin-top: 88px;
   }
 }
 /*# sourceMappingURL=pet-styles.css.map */
