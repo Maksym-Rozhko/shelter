@@ -65,7 +65,7 @@ function hiddenLast(matchMediaX) {
 
 let matchMediaX = window.matchMedia("(max-width: 880px)");
 hiddenLast(matchMediaX);
-matchMediaX.addListener(matchMediaX);
+matchMediaX.addListener(hiddenLast);
 
 function hiddenLot(matchMediaXX) {
     if (matchMediaXX.matches) { 
@@ -81,7 +81,7 @@ function hiddenLot(matchMediaXX) {
 
 let matchMediaXX = window.matchMedia("(max-width: 605px)");
 hiddenLot(matchMediaXX);
-matchMediaXX.addListener(matchMediaXX);
+matchMediaXX.addListener(hiddenLot);
 pagin.innerHTML = currentPage;
 
 prevPage.addEventListener('click', () => {
